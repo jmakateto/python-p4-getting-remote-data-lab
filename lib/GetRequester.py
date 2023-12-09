@@ -1,5 +1,7 @@
+# lib/get_requester.py
 import requests
 import json
+
 
 class GetRequester:
     def __init__(self, url):
@@ -15,6 +17,9 @@ class GetRequester:
 
 
 if __name__ == "__main__":
-    get_requester = GetRequester('https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json')
+    get_requester = GetRequester(
+        "https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json"
+    )
+
     json_data = get_requester.load_json()
     print(json_data)
